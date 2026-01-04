@@ -1,1 +1,283 @@
-/* DevTools panel styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0d1117;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.cf-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0d1117;
+}
+
+.cf-header {
+  padding: 14px 16px;
+  background: #0f172a;
+  color: #e5e7eb;
+  border-bottom: 1px solid #1f2937;
+}
+
+.cf-logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cf-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.cf-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #0f172a;
+  border-bottom: 1px solid #1f2937;
+}
+
+.cf-status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #4b5563;
+}
+
+.cf-status-indicator.waiting { background: #f59e0b; }
+.cf-status-indicator.analyzing { background: #22c55e; }
+
+.cf-status-text {
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.cf-content {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.cf-empty {
+  text-align: center;
+  padding: 28px 12px;
+  color: #9ca3af;
+}
+
+.cf-hint code {
+  background: #111827;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #e5e7eb;
+}
+
+.cf-section {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.cf-section-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+.cf-error-message {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 10px;
+  color: #fca5a5;
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  word-break: break-word;
+}
+
+.cf-meta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.cf-meta strong { color: #e5e7eb; }
+
+.cf-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #111827;
+  color: #e5e7eb;
+  border: 1px solid #1f2937;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.cf-muted {
+  color: #9ca3af;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+
+.cf-confidence {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 8px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+}
+
+.cf-confidence.high { border-color: #16a34a; }
+.cf-confidence.medium { border-color: #f59e0b; }
+.cf-confidence.low { border-color: #ef4444; }
+
+.cf-strong {
+  font-weight: 600;
+  margin: 6px 0;
+  color: #e5e7eb;
+}
+
+.cf-fixes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cf-fix {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.cf-fix-number {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cf-fix-title {
+  margin: 4px 0;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.cf-code {
+  background: #0d1117;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 10px;
+  color: #d1d5db;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.cf-prevention {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+.cf-patterns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cf-tag {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  border: 1px solid #1f2937;
+}
+
+.cf-validation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.cf-score {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.cf-score-label {
+  font-size: 12px;
+  color: #d1d5db;
+  margin-bottom: 6px;
+}
+
+.cf-score-bar {
+  width: 100%;
+  height: 6px;
+  background: #111827;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.cf-score-bar span {
+  display: block;
+  height: 100%;
+  background: #4a90e2;
+}
+
+.cf-score-value {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.cf-history {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cf-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.cf-error-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: #e5e7eb;
+}
+
+.cf-btn {
+  margin-top: 12px;
+  background: #111827;
+  color: #e5e7eb;
+  border: 1px solid #1f2937;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cf-btn:hover { background: #1f2937; }

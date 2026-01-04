@@ -1,6 +1,13 @@
 {
   "manifest_version": 3,
   "name": "ConFixr",
+  "description": "AI-powered console error root cause & fix explainer",
   "version": "0.1.0",
-  "description": "AI-powered debugging assistant for JavaScript"
+
+  "devtools_page": "devtools/devtools.html",
+
+  "permissions": [
+    "scripting",
+    "storage"
+  ]
 }
