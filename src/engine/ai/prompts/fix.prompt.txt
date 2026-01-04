@@ -1,0 +1,1 @@
+Fix suggestion prompt template

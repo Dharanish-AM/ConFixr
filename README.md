@@ -1,2 +1,4 @@
 # ConFixr
-Intelligent Console Error Root-Cause &amp; Fix Explainer
+
+AI-powered debugging assistant for JavaScript
+

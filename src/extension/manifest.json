@@ -1,0 +1,6 @@
+{
+  "manifest_version": 3,
+  "name": "ConFixr",
+  "version": "0.1.0",
+  "description": "AI-powered debugging assistant for JavaScript"
+}
