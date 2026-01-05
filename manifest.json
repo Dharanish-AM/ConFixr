@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ConFixr",
+  "version": "0.1",
+  "description": "AI-powered console error assistant",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "ConFixr - Error Assistant"
+  },
+  "background": {
+    "service_worker": "background/worker.js",
+    "type": "module"
+  },
+  "options_page": "diagnostics.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "file://*/*"],
+      "js": ["content/capture.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

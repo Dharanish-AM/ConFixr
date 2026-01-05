@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConFixr — Diagnostics & Testing</title>
+  <style>
+    body {
+      font-family: monospace;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #1e1e1e;
+      color: #d4d4d4;
+    }
+    .section {
+      margin: 20px 0;
+      padding: 15px;
+      background: #2d2d2d;
+      border-left: 3px solid #007bff;
+      border-radius: 5px;
+    }
+    .status-ok {
+      color: #4ec9b0;
+    }
+    .status-error {
+      color: #f48771;
+    }
+    h1, h2 {
+      color: #4ec9b0;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: monospace;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    pre {
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 3px;
+      overflow-x: auto;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 ConFixr Diagnostics & Testing</h1>
+  <p id="page-info" style="padding: 10px; background: #ffeaa7; color: #333; border-radius: 3px; margin-bottom: 20px;">
+    <strong>⚠️ Important:</strong> This page must be opened as an extension options page to access Chrome APIs!
+  </p>
+  <p><small>Correct ways to open this page:</small></p>
+  <ul>
+    <li>Right-click ConFixr icon → "Options"</li>
+    <li><code>chrome://extensions</code> → ConFixr → "Options"</li>
+    <li><strong>DO NOT</strong> open it as a regular file:// URL</li>
+  </ul>
+
+  <div class="section">
+    <h2>Chrome Runtime Status</h2>
+    <div id="runtime-status"></div>
+  </div>
+
+  <div class="section">
+    <h2>Storage Status</h2>
+    <div id="storage-status"></div>
+  </div>
+
+  <div class="section">
+    <h2>Trigger Test Errors</h2>
+    <p>Open <strong>test-page.html</strong> or <strong>diagnostics.html</strong> in a browser tab, then trigger errors:</p>
+    <button id="btn-runtime">Runtime Error</button>
+    <button id="btn-console">Console Error</button>
+    <button id="btn-promise">Promise Rejection</button>
+    <button id="btn-clear">Clear Storage</button>
+  </div>
+
+  <div class="section">
+    <h2>Stored Errors</h2>
+    <div id="stored-errors"></div>
+  </div>
+
+  <div class="section">
+    <h2>Console Output</h2>
+    <pre id="console-log"></pre>
+  </div>
+
+  <script src="diagnostics.js"></script>
+</body>
+</html>

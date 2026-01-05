@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ConFixr Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button.error {
+      background: #dc3545;
+    }
+    button.error:hover {
+      background: #c82333;
+    }
+    .log {
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      font-size: 12px;
+      font-family: monospace;
+    }
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 ConFixr Test Page</h1>
+  <p>Click buttons below to trigger different types of errors that ConFixr should capture:</p>
+
+  <div class="button-group">
+    <button id="test-runtime" class="error">Runtime Error</button>
+    <button id="test-console" class="error">Console.error()</button>
+    <button id="test-warn">Console.warn()</button>
+    <button id="test-promise" class="error">Promise Rejection</button>
+    <button id="test-fetch" class="error">Fetch Error</button>
+    <button id="test-cors" class="error">CORS Error</button>
+  </div>
+
+  <div class="log" id="log"></div>
+
+  <script src="test-page.js"></script>
+</body>
+</html>
