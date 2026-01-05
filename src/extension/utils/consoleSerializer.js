@@ -1,1 +1,0 @@
-// Console serializer utility

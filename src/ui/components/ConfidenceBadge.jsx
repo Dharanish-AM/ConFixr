@@ -1,1 +1,0 @@
-// Confidence badge component
